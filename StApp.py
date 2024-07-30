@@ -15,8 +15,7 @@ def encode_input(data, encoders):
         data[column] = encoder.transform([data[column]])[0]
     return data
 # Load the original dataset for visualizations
-Car_listings = pd.read_csv('C:/Projects/Car_listings.csv')
-Car_listings = Car_listings.drop(columns=['Vin'])
+Car_listings = pd.read_csv('Car_listings.csv')
 # Calculate IQR for Mileage and Price
 Q1_mileage = Car_listings['Mileage'].quantile(0.25)
 Q3_mileage = Car_listings['Mileage'].quantile(0.75)
